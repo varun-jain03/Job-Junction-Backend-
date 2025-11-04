@@ -20,6 +20,11 @@ app.use('/company', companyRouter);
 app.use('/job', jobRouter);
 app.use('/application', applicationRouter);
 
+app.get("/", (req, res) => {
+  res.send("Server is running");
+});
+
+
 
 app.listen(8080, () => {
     connectDB();
